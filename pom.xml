@@ -6,12 +6,12 @@
     <parent>
         <groupId>za.co.yellowfire</groupId>
         <artifactId>carat-parent</artifactId>
-        <version>0.1.0</version>
+        <version>0.1.3</version>
     </parent>
 
     <artifactId>carat-db</artifactId>
     <packaging>jar</packaging>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 
     <name>Carat Database</name>
     <description>The measure of performance</description>
@@ -19,161 +19,11 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <dependency.metrics.version>3.0.0</dependency.metrics.version>
-        <dependency.jdbi.version>2.49</dependency.jdbi.version>
-        <dependency.postgres.version>9.1-901.jdbc4</dependency.postgres.version>
     </properties>
 
     <dependencies>
-        <!--&lt;!&ndash;************************************************************************************************************-->
-             <!--Java Persistence-->
-        <!--*************************************************************************************************************&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.modelmapper</groupId>-->
-            <!--<artifactId>modelmapper</artifactId>-->
-            <!--<version>0.5.5</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.jooq</groupId>-->
-            <!--<artifactId>jooq</artifactId>-->
-            <!--<version>3.0.1</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.jooq</groupId>-->
-            <!--<artifactId>jooq-meta</artifactId>-->
-            <!--<version>3.0.1</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.jooq</groupId>-->
-            <!--<artifactId>jooq-codegen</artifactId>-->
-            <!--<version>3.0.1</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>postgresql</groupId>-->
-            <!--<artifactId>postgresql</artifactId>-->
-            <!--<version>9.1-901.jdbc4</version>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash;************************************************************************************************************-->
-             <!--Security-->
-        <!--*************************************************************************************************************&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.shiro</groupId>-->
-            <!--<artifactId>shiro-web</artifactId>-->
-            <!--<version>1.2.2</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>commons-logging</groupId>-->
-            <!--<artifactId>commons-logging</artifactId>-->
-            <!--<version>1.1.1</version>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash;************************************************************************************************************-->
-             <!--Context Dependency Injection-->
-        <!--*************************************************************************************************************&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.jboss.weld</groupId>-->
-            <!--<artifactId>weld-core</artifactId>-->
-            <!--<version>2.0.1.Final</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.jboss.weld.servlet</groupId>-->
-            <!--<artifactId>weld-servlet</artifactId>-->
-            <!--<version>2.0.1.Final</version>-->
-            <!--<scope>runtime</scope>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash;************************************************************************************************************-->
-             <!--Unit Testing-->
-        <!--*************************************************************************************************************&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.testng</groupId>-->
-            <!--<artifactId>testng</artifactId>-->
-            <!--<version>6.8.5</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash;************************************************************************************************************-->
-             <!--Integration Testing-->
-        <!--*************************************************************************************************************&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.jboss.arquillian.testng</groupId>-->
-            <!--<artifactId>arquillian-testng-container</artifactId>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.jboss.arquillian.container</groupId>-->
-            <!--<artifactId>arquillian-weld-ee-embedded-1.1</artifactId>-->
-            <!--<version>1.0.0.CR7</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.slf4j</groupId>-->
-            <!--<artifactId>slf4j-simple</artifactId>-->
-            <!--<version>1.6.4</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash;************************************************************************************************************-->
-             <!--Metrics-->
-        <!--*************************************************************************************************************&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>com.codahale.metrics</groupId>-->
-            <!--<artifactId>metrics-core</artifactId>-->
-            <!--<version>${dependency.metrics.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>com.codahale.metrics</groupId>-->
-            <!--<artifactId>metrics-servlets</artifactId>-->
-            <!--<version>${dependency.metrics.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>com.codahale.metrics</groupId>-->
-            <!--<artifactId>metrics-servlet</artifactId>-->
-            <!--<version>${dependency.metrics.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>com.codahale.metrics</groupId>-->
-            <!--<artifactId>metrics-jdbi</artifactId>-->
-            <!--<version>${dependency.metrics.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>com.yammer.metrics</groupId>-->
-            <!--<artifactId>metrics-jetty</artifactId>-->
-            <!--<version>2.2.0</version>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash;************************************************************************************************************-->
-             <!--Ease-->
-        <!--*************************************************************************************************************&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.projectlombok</groupId>-->
-            <!--<artifactId>lombok</artifactId>-->
-            <!--<version>0.11.8</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
-    </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.jboss.arquillian</groupId>
-                <artifactId>arquillian-bom</artifactId>
-                <type>pom</type>
-                <version>1.0.4.Final</version>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>1.7.5</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-ext</artifactId>
-                <version>1.7.5</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.cal10n</groupId>
-                <artifactId>cal10n-api</artifactId>
-                <version>0.7.7</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    </dependencies>
 
     <build>
         <finalName>carat-db</finalName>
