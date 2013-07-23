@@ -50,7 +50,7 @@
             <plugin>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok-maven-plugin</artifactId>
-                <version>0.11.8.0</version>
+                <version>${dependency.lombok.version}</version>
                 <dependencies>
                     <dependency>
                         <groupId>com.github.peichhorn</groupId>
@@ -85,8 +85,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
                     <generatedSourcesDirectory>${generated.sources}</generatedSourcesDirectory>
                 </configuration>
             </plugin>
@@ -97,7 +97,7 @@
             <plugin>
                 <groupId>com.googlecode.flyway</groupId>
                 <artifactId>flyway-maven-plugin</artifactId>
-                <version>2.1.1</version>
+                <version>${dependency.flywaydb.version}</version>
                 <configuration>
                     <user>carat-user</user>
                     <password>password1*</password>
@@ -118,7 +118,7 @@
             <plugin>
                 <groupId>org.jooq</groupId>
                 <artifactId>jooq-codegen-maven</artifactId>
-                <version>3.0.0</version>
+                <version>${dependency.jooq.version}</version>
                 <configuration>
                     <jdbc>
                         <driver>org.postgresql.Driver</driver>
@@ -170,12 +170,12 @@
                     <plugin>
                         <groupId>org.projectlombok</groupId>
                         <artifactId>lombok-maven-plugin</artifactId>
-                        <version>0.11.8.0</version>
+                        <version>${dependency.lombok.version}</version>
                         <dependencies>
                             <dependency>
                                 <groupId>sun.jdk</groupId>
                                 <artifactId>tools</artifactId>
-                                <version>1.7</version>
+                                <version>${jdk.version}</version>
                                 <scope>system</scope>
                                 <systemPath>${java.home}/../lib/tools.jar</systemPath>
                             </dependency>
