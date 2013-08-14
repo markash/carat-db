@@ -207,13 +207,6 @@
                 <db.type>postgres</db.type>
                 <db.jooq.class>org.jooq.util.postgres.PostgresDatabase</db.jooq.class>
             </properties>
-            <!--
-            <build>
-                <plugins>
-
-                </plugins>
-            </build>
-            -->
         </profile>
         <profile>
             <id>sqlserver</id>
@@ -226,37 +219,6 @@
                 <db.type>sqlserver</db.type>
                 <db.jooq.class>org.jooq.util.sqlserver.SQLServerDatabase</db.jooq.class>
             </properties>
-            <!--
-            <build>
-                <plugins>
-
-                    <plugin>
-                        <groupId>com.googlecode.flyway</groupId>
-                        <artifactId>flyway-maven-plugin</artifactId>
-                        <version>${dependency.flywaydb.version}</version>
-                        <configuration>
-                            <user>${db.user}</user>
-                            <password>${db.password}</password>
-                            <driver>${db.driver}</driver>
-                            <url>$db.url</url>
-                            <schemas>
-                                <schema>${db.schema}</schema>
-                            </schemas>
-                            <locations>
-                                <location>filesystem:/src/main/resources/db/migration/sqlserver</location>
-                            </locations>
-                        </configuration>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.microsoft.sqlserver</groupId>
-                                <artifactId>sqljdbc4</artifactId>
-                                <version>${dependency.sqlserver.version}</version>
-                            </dependency>
-                        </dependencies>
-                    </plugin>
-                </plugins>
-            </build>
-            -->
         </profile>
     </profiles>
 </project>

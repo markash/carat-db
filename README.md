@@ -17,8 +17,11 @@ Carat Database is the base project for database connectivity within the Carat pr
 
 ```
 mvn -Ppostgres flyway:init
+
 mvn -Ppostgres flyway:migrate
+
 mvn -Ppostgres jooq-codegen:generate
+
 mvn package
 ```
 
@@ -26,8 +29,11 @@ mvn package
 
 ```
 mvn -Psqlserver flyway:init
+
 mvn -Psqlserver flyway:migrate
+
 mvn -Psqlserver jooq-codegen:generate
+
 mvn package
 ```
 
