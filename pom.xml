@@ -203,7 +203,7 @@
                 <db.url>jdbc:postgresql://localhost/carat-db</db.url>
                 <db.user>carat-user</db.user>
                 <db.password>password1*</db.password>
-                <db.schema>public</db.schema>
+                <db.schema>base</db.schema>
                 <db.type>postgres</db.type>
                 <db.jooq.class>org.jooq.util.postgres.PostgresDatabase</db.jooq.class>
             </properties>
@@ -215,7 +215,7 @@
                 <db.url>jdbc:sqlserver://localhost;databaseName=carat-db</db.url>
                 <db.user>carat-user</db.user>
                 <db.password>password1*</db.password>
-                <db.schema>carat</db.schema>
+                <db.schema>base</db.schema>
                 <db.type>sqlserver</db.type>
                 <db.jooq.class>org.jooq.util.sqlserver.SQLServerDatabase</db.jooq.class>
             </properties>
