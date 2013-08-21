@@ -14,6 +14,7 @@ import javax.inject.Named;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -95,6 +96,11 @@ public class UserDao implements Dao<User>, Serializable {
         } catch (NamingException e) {
             throw new DataAccessException("Unable to resolve data source " + DATA_SOURCE);
         }
+    }
+
+    @Override
+    public User retrieveById(@NotNull Integer id) throws DataAccessException {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     public List<Role> getRoles(Integer userId) throws DataAccessException {
