@@ -106,7 +106,7 @@
                         <schema>${db.schema}</schema>
                     </schemas>
                     <locations>
-                        <location>filesystem:/src/main/resources/db/migration/${db.type}</location>
+                        <location>filesystem:src/main/resources/db/migration/${db.type}</location>
                     </locations>
                 </configuration>
                 <dependencies>
@@ -196,6 +196,18 @@
                 </plugins>
             </build>
         </profile>
+	<profile>
+	    <id>postgres-openshift</id>
+            <properties>
+                <db.driver>org.postgresql.Driver</db.driver>
+                <db.url>jdbc:postgresql://localhost:5433/carat</db.url>
+                <db.user>admin4yfghla</db.user>
+                <db.password>nSfsSJEU7Dk9</db.password>
+                <db.schema>base</db.schema>
+                <db.type>postgres</db.type>
+                <db.jooq.class>org.jooq.util.postgres.PostgresDatabase</db.jooq.class>
+            </properties>
+	</profile>
         <profile>
             <id>postgres</id>
             <properties>
